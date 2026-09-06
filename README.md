@@ -19,6 +19,8 @@ Coleção de resoluções feitas ao longo da disciplina (2017), reunida em 2020.
 
 A pasta `Questoes para organizar` guarda as demais listas (revisões para as avaliações AP1 a AP3), exemplos de IO, definição de dados, pilha, cifra, jogo da vida e exemplos com a biblioteca Gloss (asteroides e bolas, adaptados de material do professor Pedro Vasconcelos).
 
+A pasta `2014-listas-e-provas/` reúne material anterior, de 2014 (primeira passagem pela disciplina): lista 6, lista de mônadas (`ListaN.hs`), duas versões da AP3, revisão (`ListaReAp3.hs`), questões de prova (`prova/`), implementações de pilha e fila (`pilha-e-fila/`) e um exercício de xadrez (`Xadrez.hs`).
+
 ## Stack
 - Haskell (GHC/GHCi); os exemplos gráficos exigem o pacote `gloss`
 
