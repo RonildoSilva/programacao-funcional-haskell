@@ -1,34 +1,40 @@
 # Programação Funcional em Haskell
 
-> Exercícios e exemplos da disciplina de Programação Funcional da graduação: listas, recursão, tipos algébricos, entrada e saída e pequenos jogos com Gloss.
+> Exercícios, listas, avaliações e exemplos de Haskell feitos na graduação (UFC Quixadá): listas e recursão, tipos algébricos, Maybe, mônadas e IO, pilhas e filas, QuickCheck e jogos com Gloss.
 
 ![status](https://img.shields.io/badge/status-concluído-success) ![haskell](https://img.shields.io/badge/Haskell-GHC-blueviolet)
 
 ## Sobre
-Coleção de resoluções feitas ao longo da disciplina (2017), reunida em 2020. Os arquivos `Questao_2.hs` a `Questao_8.hs` respondem à lista principal:
+Material de duas passagens pela programação funcional: as listas, revisões e avaliações (AP1 a AP3 e uma prova) de 2014, e o trabalho de Linguagens de Programação com as questões 2 a 8 (produto de lista, pares, união, intersecção, palíndromo, primo, ordenação). Reunido no GitHub em 2020 e reorganizado por tema em 2026. Os arquivos foram só movidos e renomeados (histórico preservado com `git mv`); versões antigas que eram subconjunto de outra mais completa foram removidas.
 
-| Questão | Enunciado |
-|---|---|
-| 2 | Produto dos elementos de uma lista de inteiros |
-| 3 | Filtrar os números pares |
-| 4 | União de duas listas |
-| 5 | Intersecção de duas listas |
-| 6 | Verificar se uma string é palíndroma |
-| 7 | Verificar se um inteiro é primo |
-| 8 | Ordenar uma sequência de inteiros |
+A pasta `material-pedro-vasconcelos/` guarda programas de apoio do professor Pedro Vasconcelos (FCUP, 2010-2014), usados como exemplo em aula: cifra de César, jogo da vida, cadeias de Markov, verificador de tautologias, pilha como tipo abstrato e os jogos em Gloss.
 
-A pasta `Questoes para organizar` guarda as demais listas (revisões para as avaliações AP1 a AP3), exemplos de IO, definição de dados, pilha, cifra, jogo da vida e exemplos com a biblioteca Gloss (asteroides e bolas, adaptados de material do professor Pedro Vasconcelos).
-
-A pasta `2014-listas-e-provas/` reúne material anterior, de 2014 (primeira passagem pela disciplina): lista 6, lista de mônadas (`ListaN.hs`), duas versões da AP3, revisão (`ListaReAp3.hs`), questões de prova (`prova/`), implementações de pilha e fila (`pilha-e-fila/`) e um exercício de xadrez (`Xadrez.hs`).
+## Estrutura de pastas
+```text
+trabalho-linguagens-de-programacao/   questões 2 a 8 do trabalho (uma função por arquivo)
+listas/                               listas 2 a 6, lista de IO, mônadas, tipos de dados, raciocínio sobre programas (com QuickCheck), ordenação
+avaliacoes/                           AP1 (duas versões), revisões de AP1 a AP3, AP3 e sua questão 6, prova de 2014 (questões 1 a 3)
+exercicios-basicos/                   fatorial, maior/menor de três, mdc, primos, triangular; enunciados.txt
+exercicios-listas/                    binário, concatenação, inserção, inversão, length com foldl/foldr, mínimo, soma de dígitos, união; enunciados.txt
+exemplos-compreensao-de-listas/       funções de uma linha com compreensão de listas (count, frequência, pertence, único...)
+exemplos-io/                          putChar/putStr, leitura, do-notation, entrada e saída, chamada de funções puras
+estruturas-de-dados/pilha-e-fila/     módulos Pilha, PilhaVet, Queue e QueueFresca com programas de teste
+jogos/                                xadrez-rainhas.hs: posições que se atacam e permutações
+material-pedro-vasconcelos/           cifra, life, markov, tautologia, stack, gloss-asteroids, gloss-balls, gloss-events
+```
 
 ## Stack
-- Haskell (GHC/GHCi); os exemplos gráficos exigem o pacote `gloss`
+- Haskell (GHC/GHCi)
+- `QuickCheck` para `listas/lista-raciocinio-sobre-programas-quickcheck.hs`
+- `gloss` e `random` para os exemplos gráficos em `material-pedro-vasconcelos/`
 
 ## Como executar
 ```bash
-ghci Questao_6.hs
-# ou compilar:
-ghc Questao_8.hs -o ordena && ./ordena
+ghci trabalho-linguagens-de-programacao/questao-6.hs
+# módulos de pilha e fila: entrar na pasta para o import funcionar
+cd estruturas-de-dados/pilha-e-fila && ghci pilha2.hs
+# compilar um exemplo com Gloss:
+ghc material-pedro-vasconcelos/gloss-balls.hs -o balls && ./balls
 ```
 
 ## Status
